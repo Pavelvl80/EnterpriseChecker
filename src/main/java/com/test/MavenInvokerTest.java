@@ -30,7 +30,7 @@ public class MavenInvokerTest {
 //       request.setBaseDirectory(siteDirectory);
 //        request.setInteractive( false );
         request.setGoals(PUBLISH_GOALS);
-        request.setPomFile(new File("C:\\Users\\Edvard Piri\\IdeaProjects\\enterpriseChecker\\pom.xml"));
+        request.setPomFile(new File("C:\\Users\\Edvard Piri\\IdeaProjects\\EnterpriseChecker\\pom.xml"));
         String str = request.getBuilder();
 
         InvocationResult result = invoker.execute(request);
