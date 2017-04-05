@@ -1,6 +1,7 @@
 package com.controller;
 
 
+import com.test.ObjectOrientedGithubAPI;
 import com.test.TestGitApiCommands;
 import com.test.TestUtil;
 import org.springframework.stereotype.Controller;
@@ -21,16 +22,24 @@ public class TestController {
     }
 
     @RequestMapping("/test-call")
-    public ModelAndView testCall() throws Exception{
+    public ModelAndView testCall() throws Exception {
         TestUtil test = new TestUtil();
         test.test();
         return new ModelAndView("test.vm");
     }
 
     @RequestMapping("/test-git")
-    public ModelAndView testGit() throws Exception{
+    public ModelAndView testGit() throws Exception {
         TestGitApiCommands testGit = new TestGitApiCommands();
         testGit.GitHubTest();
+        return new ModelAndView("test.vm");
+    }
+
+    @RequestMapping("/test-git-api")
+    public ModelAndView testGitApi() {
+        TestGitApiCommands testGit = new TestGitApiCommands();
+        ObjectOrientedGithubAPI testGitHubApi = new ObjectOrientedGithubAPI();
+        testGitHubApi.test();
         return new ModelAndView("test.vm");
     }
 

@@ -17,7 +17,7 @@ import java.util.List;
  */
 public class TestUtil {
 
-    private static final List<String> PUBLISH_GOALS = Arrays.asList( "clean", "site-deploy" );
+//    private static final List<String> PUBLISH_GOALS = Arrays.asList( "clean", "site-deploy" );
 
     /*// define a field for the Invoker instance.
     private final Invoker invoker;
@@ -58,7 +58,7 @@ public class TestUtil {
 
     public void test() throws Exception{
 //        JUnitCore junit = new JUnitCore();
-//        Result result = junit.run(FirstTest.class);
+//        Result result = junit.run(SomeTest.class);
 //        result.getFailures();
 //        Failure failure = result.getFailures().get(0);
 //        failure.getTestHeader();
@@ -74,10 +74,28 @@ public class TestUtil {
 //        MavenCommandLineBuilder mavenCommandLineBuilder = new MavenCommandLineBuilder();
 //        mavenCommandLineBuilder.
 
+//
+//        Process process = Runtime.getRuntime().exec("mvn.cmd test");
+//        process.waitFor();
 
-        Process process = Runtime.getRuntime().exec("mvn test");
-        process.waitFor();
+
 
 
     }
+
+//    public static void main(String[] args) throws Exception {
+////        ProcessBuilder builder = new ProcessBuilder(
+////                "cmd.exe", "cd c:\\users\\edvard piri\\ideaProjects\\enterpriseChecker", "mvn test");
+////        builder.redirectErrorStream(true);
+////        Process p = builder.start();
+////        BufferedReader r = new BufferedReader(new InputStreamReader(p.getInputStream()));
+////        String line;
+////        while (true) {
+////            line = r.readLine();
+////            if (line == null) { break; }
+////            System.out.println(line);
+////        }
+////        TestUtil testUtil = new TestUtil();
+////        testUtil.test();
+//    }
 }
