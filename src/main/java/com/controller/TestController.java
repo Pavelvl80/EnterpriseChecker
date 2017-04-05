@@ -1,6 +1,7 @@
 package com.controller;
 
 
+import com.junitCoreRunnerTest.JunitCoreRunnerExample;
 import com.test.ObjectOrientedGithubAPI;
 import com.test.TestGitApiCommands;
 import com.test.TestUtil;
@@ -43,4 +44,10 @@ public class TestController {
         return new ModelAndView("test.vm");
     }
 
+    @RequestMapping("/junit-test")
+    public ModelAndView JUnitTest() {
+        JunitCoreRunnerExample runner = new JunitCoreRunnerExample();
+        runner.jUnitTest();
+        return new ModelAndView("test.vm");
+    }
 }

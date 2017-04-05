@@ -7,6 +7,9 @@ import org.junit.runner.Result;
  * Created by Edvard Piri on 05.04.2017.
  */
 public class JunitCoreRunnerExample {
+
+    //test url
+    //http://localhost:8080/junit-test
     public Boolean jUnitTest() {
         JUnitCore junit = new JUnitCore();
         Result result = junit.run(SomeTest.class);
