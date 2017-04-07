@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:form="http://www.w3.org/1999/html">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.3/ace.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.autosize/3.0.18/autosize.min.js"></script>
+    <title>home page</title>
+</head>
+<body>
+<P>home page</P>
+<p>get test result(in jsone))</p>
+<div><button onclick="getTestsResult('test')">get result</button> </div>
+<div id="result"><br><div>
+
+</div>
+<script>
+    debugger;
+    function getTestsResult(someVar) {
+        $.ajax({
+            url: '/result-of-test',
+            data: ({
+                someVar: someVar,
+            }),
+            success: function (data) {
+                debugger;
+                $('#result').append(data);
+
+            },
+            error: function (xhr) {
+                alert('Error');
+            }
+        });
+    };
+</script>
+</body>
+</html>

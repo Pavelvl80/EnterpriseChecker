@@ -16,7 +16,7 @@ import org.springframework.test.context.web.WebAppConfiguration;
 @ContextConfiguration(classes = AppConfig.class)
 public class SomeTest {
 
-    //simple test
+    //simple otherCases
     public int sum(int a, int b) {
         return a + b;
     }

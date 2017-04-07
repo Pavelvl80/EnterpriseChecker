@@ -2,9 +2,6 @@ package com.controller;
 
 
 import com.junitCoreRunnerTest.JunitCoreRunnerExample;
-import com.test.ObjectOrientedGithubAPI;
-import com.test.TestGitApiCommands;
-import com.test.TestUtil;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -15,36 +12,14 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class TestController {
 
-    @RequestMapping("/test")
+    @RequestMapping("/com/test")
     public ModelAndView Test() {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("test.vm");
         return modelAndView;
     }
 
-    @RequestMapping("/test-call")
-    public ModelAndView testCall() throws Exception {
-        TestUtil test = new TestUtil();
-        test.test();
-        return new ModelAndView("test.vm");
-    }
-
-    @RequestMapping("/test-git")
-    public ModelAndView testGit() throws Exception {
-        TestGitApiCommands testGit = new TestGitApiCommands();
-        testGit.GitHubTest();
-        return new ModelAndView("test.vm");
-    }
-
-    @RequestMapping("/test-git-api")
-    public ModelAndView testGitApi() {
-        TestGitApiCommands testGit = new TestGitApiCommands();
-        ObjectOrientedGithubAPI testGitHubApi = new ObjectOrientedGithubAPI();
-        testGitHubApi.test();
-        return new ModelAndView("test.vm");
-    }
-
-    @RequestMapping("/junit-test")
+    @RequestMapping("/junit-com.test")
     public ModelAndView JUnitTest() {
         JunitCoreRunnerExample runner = new JunitCoreRunnerExample();
         runner.jUnitTest();

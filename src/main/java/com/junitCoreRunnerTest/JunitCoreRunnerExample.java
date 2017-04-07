@@ -8,7 +8,7 @@ import org.junit.runner.Result;
  */
 public class JunitCoreRunnerExample {
 
-    //test url
+    //otherCases url
     //http://localhost:8080/junit-test
     public Boolean jUnitTest() {
         JUnitCore junit = new JUnitCore();
