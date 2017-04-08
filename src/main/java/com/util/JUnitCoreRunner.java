@@ -41,4 +41,9 @@ public class JUnitCoreRunner {
         //test failed name and
         return resultMap;
     }
+
+    public static void main(String[] args) {
+        JUnitCoreRunner jUnitCoreRunner = new JUnitCoreRunner();
+        jUnitCoreRunner.getHomeControllerIntegrationTestResult();
+    }
 }

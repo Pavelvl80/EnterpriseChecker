@@ -22,7 +22,7 @@ public class HomeController {
     }
 
     @RequestMapping("/result-of-test")
-    public String resultsOfTest(@RequestParam String someVar) {
+    public String resultsOfTest() {
         JUnitCoreRunner runner = new JUnitCoreRunner();
         Map<String, Object> testResult = runner.getHomeControllerIntegrationTestResult();
         String jsoneResult = new Gson().toJson(testResult);
